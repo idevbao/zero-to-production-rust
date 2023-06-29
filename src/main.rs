@@ -3,6 +3,7 @@ use std::net::TcpListener;
 use zero_to_production_in_rust::configuration::get_configuration;
 use zero_to_production_in_rust::startup::run;
 use zero_to_production_in_rust::telemetry::{get_subscriber, init_subscriber};
+use secrecy::ExposeSecret;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
@@ -11,7 +12,7 @@ async fn main() -> std::io::Result<()> {
 
     // Panic if we can't read configuration
     let configuration = get_configuration().expect("Failed to read configuration.");
-    let connection_pool = PgPool::connect(&configuration.database.connection_string())
+    let connection_pool = PgPool::connect(&configuration.database.connection_string().expose_secret())
         .await
         .expect("Failed to connect to Postgres.");
 
