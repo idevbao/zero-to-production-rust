@@ -8,7 +8,7 @@ on:
   # this specific branch (a.k.a. book chapter).
   push:
     branches:
-      - main
+      - golive-chapter-05
   pull_request:
     types: [ opened, synchronize, reopened ]
     branches:
