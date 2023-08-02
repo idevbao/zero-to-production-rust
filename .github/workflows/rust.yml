@@ -182,7 +182,7 @@ jobs:
           export_default_credentials: true
 
       - name: Build Docker Image
-        run: docker build -t $IMAGE_NAME:latest .
+        run: docker build -t asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:latest .
 
       - name: Configure Docker Client
         run: |-
