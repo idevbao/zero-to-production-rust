@@ -193,7 +193,7 @@ jobs:
         env:
           GIT_TAG: 'tag-v1'
         run: |-
-#          docker tag $IMAGE_NAME:latest asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:latest
-#          docker tag $IMAGE_NAME:latest asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:$GIT_TAG
+          docker tag $IMAGE_NAME:latest asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:latest
+          docker tag $IMAGE_NAME:latest asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:$GIT_TAG
           docker push asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:latest
           docker push asia-southeast1-docker.pkg.dev/$PROJECT_ID/rust2production/$IMAGE_NAME:$GIT_TAG
