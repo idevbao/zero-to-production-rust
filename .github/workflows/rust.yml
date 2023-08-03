@@ -184,5 +184,6 @@ jobs:
       - name: Push Docker Image to Artifact Registry
         run: |
           gcloud auth configure-docker asia-southeast1-docker.pkg.dev
+          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://asia-southeast1-docker.pkg.dev
           docker build -t asia-southeast1-docker.pkg.dev/neural-house-392614/theb/rusttoprod:latest .
           docker push asia-southeast1-docker.pkg.dev/neural-house-392614/theb/rusttoprod:latest
