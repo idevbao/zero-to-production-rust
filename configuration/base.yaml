@@ -2,9 +2,9 @@ application:
   port: 8000
   host: 0.0.0.0
 database:
-  host: "127.0.0.1"
+  host: "34.124.137.164"
   port: 5432
   username: "postgres"
-  password: "password"
-  database_name: "newsletter"
+  password: "kypwAk-jopjo2-qansav"
+  database_name: "postgres"
   require_ssl: false
