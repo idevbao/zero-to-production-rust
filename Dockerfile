@@ -1,4 +1,4 @@
-FROM rust:1 AS chef
+FROM lukemathwalker/cargo-chef:latest-rust-1.72.0 as chef
 RUN cargo install cargo-chef
 WORKDIR /app
 RUN apt update && apt install lld clang -y
@@ -16,7 +16,7 @@ COPY . .
 ENV SQLX_OFFLINE true
 # Build our project
 RUN cargo build --release --bin zero_to_production_in_rust
-FROM debian:buster-slim  AS runtime
+FROM debian:bookworm-slim AS runtime
 WORKDIR /app
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends openssl ca-certificates \
