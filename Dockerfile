@@ -15,7 +15,7 @@ COPY . .
 ENV SQLX_OFFLINE true
 # Build our project
 RUN cargo build --release --bin zero_to_production_in_rust
-FROM debian:bullseye-slim AS runtime
+FROM debian:buster-slim  AS runtime
 WORKDIR /app
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends openssl ca-certificates \
