@@ -1,4 +1,5 @@
-FROM lukemathwalker/cargo-chef:latest as chef
+FROM rust:1 AS chef
+RUN cargo install cargo-chef
 WORKDIR /app
 RUN apt update && apt install lld clang -y
 FROM chef as planner
