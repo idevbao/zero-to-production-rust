@@ -1,0 +1,9 @@
+application:
+  host: 0.0.0.0
+database:
+  host: 10.91.160.3
+  port: 5432
+  username: "postgres"
+  password: "kypwAk-jopjo2-qansav"
+  database_name: "postgres"
+  require_ssl: false

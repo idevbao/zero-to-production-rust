@@ -8,7 +8,7 @@ on:
   # this specific branch (a.k.a. book chapter).
   push:
     branches:
-      - main
+      - golive-chapter-05
   pull_request:
     types: [ opened, synchronize, reopened ]
     branches:
@@ -22,7 +22,7 @@ env:
 # A workflow run is made up of one or more jobs, which run in parallel by default
 # Each job runs in a runner environment specified by runs-on
 jobs:
-  # Unique identifier of our job (`job_id`)
+#   Unique identifier of our job (`job_id`)
   test:
     # Sets the name `Test` for the job, which is displayed in the GitHub UI
     name: Test
@@ -32,7 +32,7 @@ jobs:
     services:
       # Label used to access the service container
       postgres:
-        # Docker Hub image 
+        # Docker Hub image
         image: postgres:14
         # Environment variables scoped only for the `postgres` element
         env:
@@ -46,7 +46,7 @@ jobs:
     steps:
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
-        # The uses keyword specifies that this step will run v3 of the actions/checkout action. 
+        # The uses keyword specifies that this step will run v3 of the actions/checkout action.
         # This is an action that checks out your repository onto the runner, allowing you to run scripts or other actions against your code (such as build and test tools).
         # You should use the checkout action any time your workflow will run against the repository's code.
         uses: actions/checkout@v3
@@ -82,7 +82,7 @@ jobs:
       - name: Run tests
         run: cargo test
 
-  # `fmt` container job
+#   `fmt` container job
   fmt:
     name: Rustfmt
     runs-on: ubuntu-latest
@@ -95,7 +95,7 @@ jobs:
       - name: Enforce formatting
         run: cargo fmt --check
 
-  # `clippy` container job
+#   `clippy` container job
   clippy:
     name: Clippy
     runs-on: ubuntu-latest
@@ -130,7 +130,7 @@ jobs:
       - name: Linting
         run: cargo clippy -- -D warnings
 
-  # `coverage` container job
+#   `coverage` container job
   coverage:
     name: Code coverage
     runs-on: ubuntu-latest
