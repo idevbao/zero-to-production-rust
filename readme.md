@@ -29,7 +29,7 @@ cargo install --version=0.5.7 sqlx-cli --no-default-features --features postgres
 export DATABASE_URL=postgres://postgres:password@127.0.0.1:5432/newsletter
 sqlx migrate add create_subscriptions_table
 
-# timestamp}_create_subscriptions_table.sql
+# {timestamp}_create_subscriptions_table.sql
 Under migrations you should already have one file called {timestamp}_create_subscriptions_table.sql
 - this is where we have to write the SQL code for our first migration. Let’s quickly sketch the query we need:
 
@@ -38,7 +38,9 @@ start docker
 in ./scripts/init_db.sh with sqlx migrate run
 then => SKIP_DOCKER=true ./scripts/init_db.sh
 
-# configuration.yaml
+on production -> export DATABASE_URL flow config on production.yaml
+
+# configuration.yaml *
 We want to read our application settings from a configuration file named configuration:
 
 Just like sqlx-cli commands, it relies on the DATABASE_URL environment variable to know where to find the database.
@@ -47,6 +49,7 @@ Let’s take the advice of sqlx’s authors - we’ll add a top-level .env file
 configuration.yaml can be used to alter the runtime behaviour of the application after it has been compiled, 
 while .env is only relevant for our development process, build and test steps.
 
+-> configuration.yaml past to configuration for env .yaml 
 
 # create image
 docker build --tag zero2prod --file Dockerfile .
