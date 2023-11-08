@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/zero_to_production_in_rust.iml" filepath="$PROJECT_DIR$/zero_to_production_in_rust.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zero-to-production-rust.iml" filepath="$PROJECT_DIR$/zero-to-production-rust.iml" />
     </modules>
   </component>
 </project>

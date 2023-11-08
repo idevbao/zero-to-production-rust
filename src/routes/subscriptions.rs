@@ -4,7 +4,6 @@ use sqlx::PgPool;
 use tracing::Instrument;
 use unicode_segmentation::UnicodeSegmentation;
 use uuid::Uuid;
-use crate::domain::NewSubscriber;
 
 #[derive(serde::Deserialize)]
 pub struct FormData {
@@ -61,7 +60,7 @@ pub async fn subscribe(form: web::Form<FormData>, pool: web::Data<PgPool>) -> im
 
 #[tracing::instrument(
     name = "Saving new subscriber details in the database",
-    skip(new_subscriber, pool)
+    skip(form, pool)
 )]
 pub async fn insert_subscriber(pool: &PgPool, form: &FormData) -> Result<(), sqlx::Error> {
     sqlx::query!(
@@ -97,7 +96,7 @@ pub fn is_valid_name(s: &str) -> bool {
     //
     // `graphemes` returns an iterator over the graphemes in the input `s`.
     // `true` specifies that we want to use the extended grapheme definition set, // the recommended one.
-    let is_too_long = s.graphemes(true).count() > actix_web::http::header::ContentLength::from(256);
+    let is_too_long = s.graphemes(true).count() > 256;
     // Iterate over all characters in the input `s` to check if any of them matches
     // one of the characters in the forbidden array.
     let forbidden_characters = ['/', '(', ')', '"', '<', '>', '\\', '{', '}'];

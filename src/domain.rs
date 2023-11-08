@@ -1,4 +1,3 @@
-use actix_web::http::header::ContentLength;
 use unicode_segmentation::UnicodeSegmentation;
 
 pub struct SubscriberName(String);
@@ -19,7 +18,7 @@ impl SubscriberName {
         //
         // `graphemes` returns an iterator over the graphemes in the input `s`.
         // `true` specifies that we want to use the extended grapheme definition set, // the recommended one.
-        let is_too_long = s.graphemes(true).count() > ContentLength::from(256);
+        let is_too_long = s.graphemes(true).count() > 256;
         // Iterate over all characters in the input `s` to check if any of them matches
         // one of the characters in the forbidden array.
         let forbidden_characters = ['/', '(', ')', '"', '<', '>', '\\', '{', '}'];
