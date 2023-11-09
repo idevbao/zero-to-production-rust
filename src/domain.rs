@@ -1,3 +1,4 @@
+use serde::{Deserialize, Serialize};
 use unicode_segmentation::UnicodeSegmentation;
 
 pub struct SubscriberName(String);
@@ -6,7 +7,10 @@ pub struct NewSubscriber {
     pub email: String,
     pub name: SubscriberName,
 }
-
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct DetailPost {
+    pub title: String,
+}
 impl SubscriberName {
     pub fn parse(s: String) -> SubscriberName {
         // `.trim()` returns a view over the input `s` without trailing

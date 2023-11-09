@@ -7,6 +7,7 @@ use zero_to_production_in_rust::telemetry::{get_subscriber, init_subscriber};
 /*init_subscriber should only be called once*/
 use once_cell::sync::Lazy;
 use secrecy::ExposeSecret;
+use zero_to_production_in_rust::domain::DetailPost;
 
 static TRACING: Lazy<()> = Lazy::new(|| {
     let default_filter_level = "info".to_string();
@@ -40,8 +41,11 @@ async fn health_check_works() {
     assert!(response.status().is_success());
     match response.text().await {
         Ok(body) => {
-            assert_eq!(body, "OK Http Response!", "The API did not return a content is `OK Http Response!`");
-        },
+            assert_eq!(
+                body, "OK Http Response!",
+                "The API did not return a content is `OK Http Response!`"
+            );
+        }
         Err(_er) => {}
     }
 }
@@ -163,6 +167,40 @@ async fn spawn_app() -> TestApp {
     TestApp {
         address,
         db_pool: connection_pool,
+    }
+}
+
+#[tokio::test]
+async fn get_md_list() {
+    // Arrange
+    let app = spawn_app().await;
+    let client = reqwest::Client::new();
+    let detail_post: DetailPost = DetailPost {
+        title: "get_md_list_title".to_string(),
+    };
+    let object_json_string = serde_json::to_string(&detail_post);
+    // to perform HTTP requests against our application.
+
+    // Act
+    let response = client
+        .get(&format!("{}/get_md_list", &app.address))
+        .send()
+        .await
+        .expect("Failed to execute request /get_md_list.");
+    // Use the returned application address
+
+    // Assert
+    assert!(response.status().is_success());
+
+    match response.text().await {
+        Ok(body) => {
+            assert_eq!(
+                object_json_string.unwrap(),
+                body,
+                "The API did not return a content is `/get_md_list json`"
+            );
+        }
+        Err(_er) => {}
     }
 }
 
