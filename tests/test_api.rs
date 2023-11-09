@@ -38,7 +38,12 @@ async fn health_check_works() {
 
     // Assert
     assert!(response.status().is_success());
-    assert_eq!(Some(0), response.content_length());
+    match response.text().await {
+        Ok(body) => {
+            assert_eq!(body, "OK Http Response!", "The API did not return a content is `OK Http Response!`");
+        },
+        Err(_er) => {}
+    }
 }
 
 #[tokio::test]

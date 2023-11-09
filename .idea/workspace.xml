@@ -9,10 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/domain.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/mod.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/subscriptions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/subscriptions.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/upload.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/upload.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/health_check.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health_check.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_api.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -65,9 +67,10 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo.Test health_check_works">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="command" value="run" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -82,8 +85,9 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run" />
+    <configuration name="Test health_check_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package zero_to_production_in_rust --test test_api health_check_works -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -98,6 +102,15 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cargo.Run" />
+      <item itemvalue="Cargo.Test health_check_works" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Test health_check_works" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -110,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699409499177</updated>
-      <workItem from="1699409500344" duration="7277000" />
+      <workItem from="1699409500344" duration="15589000" />
+      <workItem from="1699492688672" duration="7736000" />
     </task>
     <servers />
   </component>
