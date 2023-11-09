@@ -7,6 +7,7 @@ use zero_to_production_in_rust::telemetry::{get_subscriber, init_subscriber};
 /*init_subscriber should only be called once*/
 use once_cell::sync::Lazy;
 use secrecy::ExposeSecret;
+use zero_to_production_in_rust::domain::DetailPost;
 
 static TRACING: Lazy<()> = Lazy::new(|| {
     let default_filter_level = "info".to_string();
@@ -38,7 +39,15 @@ async fn health_check_works() {
 
     // Assert
     assert!(response.status().is_success());
-    assert_eq!(Some(0), response.content_length());
+    match response.text().await {
+        Ok(body) => {
+            assert_eq!(
+                body, "OK Http Response!",
+                "The API did not return a content is `OK Http Response!`"
+            );
+        }
+        Err(_er) => {}
+    }
 }
 
 #[tokio::test]
@@ -67,6 +76,42 @@ async fn subscribe_returns_a_200_for_valid_form_data() {
         .expect("Failed to fetch saved subscription.");
     assert_eq!(saved.email, "ursula_le_guin@gmail.com");
     assert_eq!(saved.name, "le guin");
+}
+
+#[tokio::test]
+async fn subscribe_returns_a_200_when_fields_are_present_but_empty() {
+    // Arrange
+    let app = spawn_app().await;
+    let client = reqwest::Client::new();
+    let test_cases = vec![
+        ("name=&email=ursula_le_guin%40gmail.com", "empty name"),
+        ("name=Ursula&email=", "empty email"),
+        // ("name=Ursula&email=definitely-not-an-email", "invalid email"),
+    ];
+
+    // Act  test case
+    for (body, description_error) in test_cases {
+        let response = client
+            .post(&format!("{}/subscriptions", &app.address))
+            .header("Content-Type", "application/x-www-form-urlencoded")
+            .body(body)
+            .send()
+            .await
+            .expect("Failed to execute request.");
+        // Assert
+        assert_eq!(
+            400,
+            response.status().as_u16(),
+            "The API did not return a 400 OK when the payload was {}.",
+            description_error
+        );
+        // assert_eq!(
+        //     200,
+        //     response.status().as_u16(),
+        //     "The API did not return a 200 OK when the payload was {}.",
+        //     description_error
+        // );
+    }
 }
 
 #[tokio::test]
@@ -122,6 +167,40 @@ async fn spawn_app() -> TestApp {
     TestApp {
         address,
         db_pool: connection_pool,
+    }
+}
+
+#[tokio::test]
+async fn get_md_list() {
+    // Arrange
+    let app = spawn_app().await;
+    let client = reqwest::Client::new();
+    let detail_post: DetailPost = DetailPost {
+        title: "get_md_list_title".to_string(),
+    };
+    let object_json_string = serde_json::to_string(&detail_post);
+    // to perform HTTP requests against our application.
+
+    // Act
+    let response = client
+        .get(&format!("{}/get_md_list", &app.address))
+        .send()
+        .await
+        .expect("Failed to execute request /get_md_list.");
+    // Use the returned application address
+
+    // Assert
+    assert!(response.status().is_success());
+
+    match response.text().await {
+        Ok(body) => {
+            assert_eq!(
+                object_json_string.unwrap(),
+                body,
+                "The API did not return a content is `/get_md_list json`"
+            );
+        }
+        Err(_er) => {}
     }
 }
 
