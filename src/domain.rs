@@ -1,8 +1,6 @@
 use serde::{Deserialize, Serialize};
-use unicode_segmentation::UnicodeSegmentation;
-
 pub struct SubscriberName(String);
-
+use unicode_segmentation::UnicodeSegmentation;
 pub struct NewSubscriber {
     pub email: String,
     pub name: SubscriberName,
@@ -12,7 +10,7 @@ pub struct DetailPost {
     pub title: String,
 }
 impl SubscriberName {
-    pub fn parse(s: String) -> SubscriberName {
+    pub fn parse(s: String) -> Result<SubscriberName, String> {
         // `.trim()` returns a view over the input `s` without trailing
         // whitespace-like characters.
         // `.is_empty` checks if the view contains any character.
@@ -28,9 +26,27 @@ impl SubscriberName {
         let forbidden_characters = ['/', '(', ')', '"', '<', '>', '\\', '{', '}'];
         let contains_forbidden_characters = s.chars().any(|g| forbidden_characters.contains(&g));
         if is_empty_or_whitespace || is_too_long || contains_forbidden_characters {
-            panic!("{} is not a valid subscriber name.", s)
+            // panic!("{} is not a valid subscriber name.", s)
+            Err(format!("{} is not a valid subscriber name.", s))
         } else {
-            Self(s)
+            Ok(Self(s))
         }
     }
+}
+
+pub trait AsRef<T: ?Sized> {
+    /// Performs the conversion.
+    fn as_ref(&self) -> &T;
+}
+
+impl AsRef<str> for SubscriberName {
+    fn as_ref(&self) -> &str {
+        &self.0
+    }
+}
+
+#[test]
+fn dummy_fail() {
+    let result: Result<&str, &str> = Err("The app crashed due to an IO error");
+    assert!(result.is_ok());
 }
