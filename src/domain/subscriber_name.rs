@@ -1,13 +1,9 @@
-use serde::{Deserialize, Serialize};
-pub struct SubscriberName(String);
 use unicode_segmentation::UnicodeSegmentation;
-pub struct NewSubscriber {
-    pub email: String,
-    pub name: SubscriberName,
-}
-#[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct DetailPost {
-    pub title: String,
+pub struct SubscriberName(String);
+impl AsRef<str> for SubscriberName {
+    fn as_ref(&self) -> &str {
+        &self.0
+    }
 }
 impl SubscriberName {
     pub fn parse(s: String) -> Result<SubscriberName, String> {
@@ -32,21 +28,4 @@ impl SubscriberName {
             Ok(Self(s))
         }
     }
-}
-
-pub trait AsRef<T: ?Sized> {
-    /// Performs the conversion.
-    fn as_ref(&self) -> &T;
-}
-
-impl AsRef<str> for SubscriberName {
-    fn as_ref(&self) -> &str {
-        &self.0
-    }
-}
-
-#[test]
-fn dummy_fail() {
-    let result: Result<&str, &str> = Err("The app crashed due to an IO error");
-    assert!(result.is_ok());
 }

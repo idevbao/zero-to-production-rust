@@ -7,7 +7,7 @@ use zero_to_production_in_rust::telemetry::{get_subscriber, init_subscriber};
 /*init_subscriber should only be called once*/
 use once_cell::sync::Lazy;
 use secrecy::ExposeSecret;
-use zero_to_production_in_rust::domain::DetailPost;
+use zero_to_production_in_rust::detail_post::DetailPost;
 
 static TRACING: Lazy<()> = Lazy::new(|| {
     let default_filter_level = "info".to_string();

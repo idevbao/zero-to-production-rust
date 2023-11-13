@@ -8,10 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/detail_post.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/new_subscriber.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/subscriber_email.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/subscriber_name.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/get_all.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/get_all.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/subscriptions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/subscriptions.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_api.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.rs" afterDir="false" />
     </list>
@@ -20,10 +27,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="golive-chapter-05" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,14 +74,15 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "golive-chapter-05",
-    "last_opened_file_path": "/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/routes",
+    "git-widget-placeholder": "golive-chapter-06",
+    "last_opened_file_path": "/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/domain",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.disableDetachedFileInspection/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/domaim/new_subscriber.rs": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -78,6 +93,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/domain" />
       <recent name="$PROJECT_DIR$/src/routes" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -232,6 +248,8 @@
       <workItem from="1699804982470" duration="73000" />
       <workItem from="1699805065361" duration="20000" />
       <workItem from="1699805096526" duration="1605000" />
+      <workItem from="1699840524481" duration="939000" />
+      <workItem from="1699864773048" duration="5220000" />
     </task>
     <servers />
   </component>

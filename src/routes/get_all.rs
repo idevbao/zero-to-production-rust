@@ -1,6 +1,5 @@
+use crate::detail_post::DetailPost;
 use actix_web::{HttpResponse, Result};
-
-use crate::domain::DetailPost;
 
 pub async fn get_md_list() -> Result<HttpResponse> {
     let detail_post: DetailPost = DetailPost {
