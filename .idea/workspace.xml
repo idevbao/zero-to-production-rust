@@ -8,19 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/detail_post.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/new_subscriber.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/subscriber_email.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/subscriber_name.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/get_all.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/get_all.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/subscriptions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/subscriptions.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_api.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,8 +238,17 @@
       <workItem from="1699805065361" duration="20000" />
       <workItem from="1699805096526" duration="1605000" />
       <workItem from="1699840524481" duration="939000" />
-      <workItem from="1699864773048" duration="5220000" />
+      <workItem from="1699864773048" duration="6902000" />
     </task>
+    <task id="LOCAL-00001" summary="update-test-subscription">
+      <option name="closed" value="true" />
+      <created>1699870610076</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699870610076</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +264,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="update-test-subscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-test-subscription" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

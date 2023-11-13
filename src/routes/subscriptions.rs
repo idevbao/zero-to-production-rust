@@ -1,4 +1,4 @@
-use actix_web::{web, HttpResponse, Responder};
+use actix_web::{web, HttpResponse};
 use chrono::Utc;
 use sqlx::PgPool;
 use uuid::Uuid;
@@ -11,6 +11,15 @@ pub struct FormData {
     name: String,
 }
 
+impl TryFrom<FormData> for NewSubscriber {
+    type Error = String;
+    fn try_from(value: FormData) -> Result<Self, Self::Error> {
+        let name = SubscriberName::parse(value.name)?;
+        let email = SubscriberEmail::parse(value.email)?;
+        Ok(Self { email, name })
+    }
+}
+
 #[allow(clippy::async_yields_async)]
 #[tracing::instrument(
 name = "Adding a new subscriber",
@@ -18,18 +27,22 @@ skip(form, pool),
 fields(
     subscriber_email = %form.email, subscriber_name= %form.name
 ))]
-pub async fn subscribe(form: web::Form<FormData>, pool: web::Data<PgPool>) -> impl Responder {
-    let name = match SubscriberName::parse(form.0.name) {
-        Ok(_name) => _name,
+pub async fn subscribe(form: web::Form<FormData>, pool: web::Data<PgPool>) -> HttpResponse {
+    // swap parse to try_from
+    // let name = match SubscriberName::parse(form.0.name) {
+    //     Ok(_name) => _name,
+    //     Err(_) => return HttpResponse::BadRequest().finish(),
+    // };
+    //
+    // let email = match SubscriberEmail::parse(form.0.email) {
+    //     Ok(_email) => _email,
+    //     Err(_) => return HttpResponse::BadRequest().finish(),
+    // };
+
+    let new_subscriber = match form.0.try_into() {
+        Ok(_form) => _form,
         Err(_) => return HttpResponse::BadRequest().finish(),
     };
-
-    let email = match SubscriberEmail::parse(form.0.email) {
-        Ok(_email) => _email,
-        Err(_) => return HttpResponse::BadRequest().finish(),
-    };
-
-    let new_subscriber = NewSubscriber { email, name };
 
     match insert_subscriber(&pool, &new_subscriber).await {
         Ok(_) => HttpResponse::Ok().finish(),
