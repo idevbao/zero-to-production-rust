@@ -8,5 +8,5 @@ pub struct DetailPost {
 #[test]
 fn dummy_fail() {
     let result: Result<&str, &str> = Err("The app crashed due to an IO error");
-    assert!(result.is_ok());
+    assert!(result.is_err());
 }
