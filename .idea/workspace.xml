@@ -8,12 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/thread_pool.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detail_post.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/detail_post.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/subscriber_email.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/subscriber_email.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/subscriber_name.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/subscriber_name.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,13 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -35,11 +41,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="b7z6itjx" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -64,10 +80,13 @@
     &quot;Cargo.Test subscribe_returns_a_400_when_fields_are_present_but_invalid.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;golive-chapter-06&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/domain&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -97,7 +116,24 @@
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Run">
+  <component name="RunManager" selected="Cargo.Run zero_to_production_in_rust">
+    <configuration name="Run zero_to_production_in_rust" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package zero_to_production_in_rust --bin zero_to_production_in_rust" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="emulateTerminal" value="false" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="command" value="run" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -119,23 +155,6 @@
       <option name="command" value="test --package zero_to_production_in_rust --lib domain::dummy_fail -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test get_md_list" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package zero_to_production_in_rust --test test_api get_md_list -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
@@ -202,19 +221,19 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Run" />
+      <item itemvalue="Cargo.Run zero_to_production_in_rust" />
       <item itemvalue="Cargo.Test domain::dummy_fail" />
       <item itemvalue="Cargo.Test subscribe_returns_a_400_when_data_is_missing" />
-      <item itemvalue="Cargo.Test get_md_list" />
       <item itemvalue="Cargo.Test health_check_works" />
       <item itemvalue="Cargo.Test subscribe_returns_a_400_when_fields_are_present_but_invalid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Run zero_to_production_in_rust" />
         <item itemvalue="Cargo.Test subscribe_returns_a_400_when_fields_are_present_but_invalid" />
         <item itemvalue="Cargo.Test subscribe_returns_a_400_when_data_is_missing" />
         <item itemvalue="Cargo.Test domain::dummy_fail" />
         <item itemvalue="Cargo.Test health_check_works" />
-        <item itemvalue="Cargo.Test get_md_list" />
       </list>
     </recent_temporary>
   </component>
@@ -243,6 +262,10 @@
       <workItem from="1699805096526" duration="1605000" />
       <workItem from="1699840524481" duration="939000" />
       <workItem from="1699864773048" duration="6902000" />
+      <workItem from="1703480942800" duration="619000" />
+      <workItem from="1703485161357" duration="1000" />
+      <workItem from="1703555977900" duration="39675000" />
+      <workItem from="1704162001487" duration="12777000" />
     </task>
     <task id="LOCAL-00001" summary="update-test-subscription">
       <option name="closed" value="true" />
@@ -274,6 +297,10 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="update-test-subscription" />
     <option name="LAST_COMMIT_MESSAGE" value="update-test-subscription" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

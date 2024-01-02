@@ -1,0 +1,87 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"CargoProjects\">\n    <cargoProject FILE=\"$PROJECT_DIR$/Cargo.toml\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5bcffc90-093e-4b23-8078-4797aeeecb1c\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/routes/get_all.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Cargo.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cargo.lock\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Cargo.toml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cargo.toml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/domain.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/domain.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/routes/health_check.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/routes/health_check.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/routes/mod.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/routes/mod.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/startup.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/startup.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/tests/test_api.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/tests/test_api.rs\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"b7z6itjx\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2XsEgUfvwzrTPBRP3UJGwZQJozB\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"autoscrollFromSource\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"showMembers\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"dart.analysis.tool.window.visible\": \"false\",\n    \"git-widget-placeholder\": \"golive-chapter-05\",\n    \"last_opened_file_path\": \"/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/routes\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"org.rust.cargo.project.model.PROJECT_DISCOVERY\": \"true\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"show.migrate.to.gradle.popup\": \"false\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/routes\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Cargo.Test get_md_list\">\n    <configuration name=\"Run\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" nameIsGenerated=\"true\">\n      <option name=\"command\" value=\"run\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <option name=\"emulateTerminal\" value=\"false\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <envs />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test get_all\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"command\" value=\"test --package zero_to_production_in_rust --test test_api get_all -- --exact\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <option name=\"emulateTerminal\" value=\"false\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <envs />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test get_md_list\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"command\" value=\"test --package zero_to_production_in_rust --test test_api get_md_list -- --exact\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <option name=\"emulateTerminal\" value=\"false\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <envs />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test health_check_works\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"command\" value=\"test --package zero_to_production_in_rust --test test_api health_check_works -- --exact\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <option name=\"emulateTerminal\" value=\"false\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <envs />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <list>\n      <item itemvalue=\"Cargo.Run\" />\n      <item itemvalue=\"Cargo.Test get_all\" />\n      <item itemvalue=\"Cargo.Test get_md_list\" />\n      <item itemvalue=\"Cargo.Test health_check_works\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Cargo.Test get_md_list\" />\n        <item itemvalue=\"Cargo.Test get_all\" />\n        <item itemvalue=\"Cargo.Test health_check_works\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"RustProjectSettings\">\n    <option name=\"toolchainHomeDirectory\" value=\"$USER_HOME$/.cargo/bin\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5bcffc90-093e-4b23-8078-4797aeeecb1c\" name=\"Changes\" comment=\"\" />\n      <created>1699409499177</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1699409499177</updated>\n      <workItem from=\"1699409500344\" duration=\"15589000\" />\n      <workItem from=\"1699492688672\" duration=\"23258000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -7,17 +7,7 @@
+     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/routes/get_all.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/domain.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/routes/health_check.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health_check.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/routes/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mod.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/startup.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/startup.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/tests/test_api.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.rs" afterDir="false" />
+-    </list>
++    <list default="true" id="5bcffc90-093e-4b23-8078-4797aeeecb1c" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -44,27 +34,27 @@
+     <option name="showLibraryContents" value="true" />
+     <option name="showMembers" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "dart.analysis.tool.window.visible": "false",
+-    "git-widget-placeholder": "golive-chapter-05",
+-    "last_opened_file_path": "/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/routes",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "show.migrate.to.gradle.popup": "false"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;golive-chapter-05&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/acbs2030/development/apps/22prod/zero-to-production-rust/src/routes&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/routes" />
+@@ -187,4 +177,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
++  </component>
+ </project>
+\ No newline at end of file
